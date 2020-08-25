@@ -65,7 +65,7 @@
 
 
     <main>
-        <h2>Undetitel</h2>
+        <h2>Undertitel</h2>
         <section>
             <article>
                 <img src="placeimg_640_480_any.png" alt="billede1">
@@ -78,7 +78,7 @@
 
             <article>
                 <img src="placeimg_640_480_any.jpg" alt="billede2">
-                <h3>Article 3</h3>
+                <h3>Article 2</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur quas blanditiis eum magni nulla? Numquam esse labore, eius similique quis odio mollitia non! Voluptatibus unde consectetur quis, cupiditate nesciunt repellendus recusandae consequatur iste. Deleniti ipsa esse architecto ipsum deserunt tenetur laborum omnis sit! Laborum, rem distinctio. Alias inventore quod repellat debitis laudantium, tenetur deleniti commodi. Sit officiis quidem natus, saepe impedit assumenda beatae iusto suscipit minima, porro odit voluptates ab earum ex vel consectetur aut, harum possimus! Doloremque ipsum accusantium fugiat officia neque provident, cum nihil explicabo tempore dicta, quos, minus sapiente, blanditiis hic. Ad quaerat nam minima animi cum?</p>
             </article>
         </section>
@@ -103,8 +103,17 @@
         const artikel_1_h3 = document.querySelector("article:first-child h3");
         console.log(artikel_1_h3);
 
+        const artikel_1_p = document.querySelector("article:first-child p");
+        console.log(artikel_1_p);
+
         const artikel_2 = document.querySelector("article:nth-child(2)");
         console.log(artikel_2);
+
+        const artikel_2_h3 = document.querySelector("article:nth-child(2) h3");
+        console.log(artikel_2_h3);
+
+        const artikel_2_p = document.querySelector("article:nth-child(2) p");
+        console.log(artikel_2_p);
 
         const underoverskrift = document.querySelector("h2");
         console.log(underoverskrift);
@@ -122,6 +131,16 @@
         console.log(fod);
 
         fod.textContent = "stor fod";
+
+        overskrift.textContent = "New title";
+
+        artikel_1_h3.textContent = "chuckwallah > mp5"
+
+        artikel_2_h3.textContent = "dette er en ny text hej med dig"
+
+        artikel_1_p.textContent = "ny p in da makiing"
+
+        artikel_2_p.textContent = "wohooo det spiller bare det her"
     </script>
 
 
