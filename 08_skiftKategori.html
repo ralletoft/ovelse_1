@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Titel</h1>
+        <style>
+            h1,
+            h2 {
+                text-align: center;
+            }
+
+
+
+            h1 {
+                border: 1px solid;
+            }
+
+
+
+            img {
+                width: 100%;
+            }
+
+
+
+            section {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+
+
+            article {
+                border: 1px solid;
+                flex-basis: 500px;
+                width: 50vw;
+            }
+
+
+
+            img {
+                align-self: center;
+            }
+
+
+
+
+            footer {
+                border: 1px solid;
+                width: 100vw;
+                text-align: center;
+            }
+
+        </style>
+    </header>
+
+
+    <main>
+        <h2>Undertitel</h2>
+        <section>
+            <article>
+                <img src="placeimg_640_480_any.png" alt="billede1">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore cum ipsa qui omnis sed rerum? Error veritatis non incidunt rem repellendus eius laboriosam alias quod quam ea earum sit ab praesentium ipsam accusamus nostrum magni consectetur facilis dolore ipsa, doloremque vel repellat autem. Ea aperiam fugit, cupiditate cum laudantium molestias laboriosam qui nisi dicta alias, iure vero maxime possimus dolores ut laborum similique est architecto. Culpa error, qui deleniti eius atque accusamus. Molestiae quisquam placeat ipsa soluta odio rem dolor iusto. Unde quis, incidunt nostrum accusantium aspernatur quos id excepturi minus distinctio, placeat, optio quod. Alias, quo mollitia nisi id.</p>
+            </article>
+
+
+
+
+            <article>
+                <img src="placeimg_640_480_any.jpg" alt="billede2">
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur quas blanditiis eum magni nulla? Numquam esse labore, eius similique quis odio mollitia non! Voluptatibus unde consectetur quis, cupiditate nesciunt repellendus recusandae consequatur iste. Deleniti ipsa esse architecto ipsum deserunt tenetur laborum omnis sit! Laborum, rem distinctio. Alias inventore quod repellat debitis laudantium, tenetur deleniti commodi. Sit officiis quidem natus, saepe impedit assumenda beatae iusto suscipit minima, porro odit voluptates ab earum ex vel consectetur aut, harum possimus! Doloremque ipsum accusantium fugiat officia neque provident, cum nihil explicabo tempore dicta, quos, minus sapiente, blanditiis hic. Ad quaerat nam minima animi cum?</p>
+            </article>
+        </section>
+        <footer>This is the footer</footer>
+    </main>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            console.log("load")
+
+            const overskrift = document.querySelector("h1");
+            console.log(overskrift);
+
+            const indhold = document.querySelector("main");
+            console.log(indhold);
+
+            const sektion = document.querySelector("section");
+            console.log(sektion);
+
+            const artikel_1 = document.querySelector("article:first-child");
+            console.log(artikel_1);
+
+            const artikel_1_h3 = document.querySelector("article:first-child h3");
+            console.log(artikel_1_h3);
+
+            const artikel_1_p = document.querySelector("article:first-child p");
+            console.log(artikel_1_p);
+
+            const artikel_2 = document.querySelector("article:nth-child(2)");
+            console.log(artikel_2);
+
+            const artikel_2_h3 = document.querySelector("article:nth-child(2) h3");
+            console.log(artikel_2_h3);
+
+            const artikel_2_p = document.querySelector("article:nth-child(2) p");
+            console.log(artikel_2_p);
+
+            const underoverskrift = document.querySelector("h2");
+            console.log(underoverskrift);
+
+            const billede_1 = document.querySelector("img:first-child");
+            console.log(billede_1);
+
+            const billede_2 = document.querySelector("article:nth-child(2) img");
+            console.log(billede_2);
+
+            const underunderoverskrift = document.querySelector("h3");
+            console.log(underunderoverskrift);
+
+            const fod = document.querySelector("footer");
+            console.log(fod);
+
+            fod.textContent = "stor fod";
+
+            overskrift.textContent = "New title";
+
+            artikel_1_h3.textContent = "mp7 > mp5"
+
+            artikel_2_h3.textContent = "dette er en ny text hej med dig"
+
+            artikel_1_p.textContent = "ny p in da makiing"
+
+            artikel_2_p.textContent = "wohooo det spiller bare det her"
+
+            billede_1.src = "nightsky.jpg";
+
+            billede_2.src = "kat.jpg";
+
+
+            billede_1.addEventListener("click", doSomething);
+
+            billede_2.addEventListener("click", skift);
+
+            function doSomething() {
+                console.log("test")
+                tal = Math.round(Math.random() * 10);
+                billede_1.src = "https://placeimg.com/400/300/arch?t=" + tal
+            }
+        }
+
+        function skift() {
+            const kategorier = ["animals", "arch", "people", "nature", "tech"]
+            const nummer = Math.round(Math.random() * 4)
+            billede_2.src = "https://placeimg.com/400/300/arch?t=" + kategorier[nummer];
+            billede_2.alt = kategorier[nummer];
+        }
+
+    </script>
+
+
+</body>
+
+</html>
