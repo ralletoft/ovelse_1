@@ -9,17 +9,38 @@
 </head>
 
 <body>
+
+    <article id="dyr">
+        <h3></h3>
+        <img src="" alt="">
+        <p class="type"></p>
+        <p class="levested"></p>
+    </article>
     <script>
-        let dyr = {
-            "navn": "gris",
-            "type": "pattedyr",
-            "levested": "svinesti",
-            "billede": "http://mabe-kea.dk/E19/pics/pig.png"
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            const overskrift = document.querySelector("h3")
+            const billede = document.querySelector("img")
+            const type = document.querySelector(".type")
+            const levested = document.querySelector(".levested")
+
+
+            let dyr = {
+                "navn": "gris",
+                "type": "pattedyr",
+                "levested": "svinesti",
+                "billede": "http://mabe-kea.dk/E19/pics/pig.png"
+            }
+
+            console.log(`dyr: ${dyr.navn} type: ${dyr.type} levested: ${dyr.levested} billede: ${dyr.billede}`)
+            overskrift.textContent = dyr.navn;
+            billede.src = dyr.billede;
+            type.textContent = dyr.type;
+            levested.textContent = dyr.levested;
+
+
         }
-
-        console.log(`dyr: ${dyr.navn} type: ${dyr.type} levested: ${dyr.levested} billede: ${dyr.billede}`)
-
     </script>
-</body>
-
-</html>
+</body></html>
